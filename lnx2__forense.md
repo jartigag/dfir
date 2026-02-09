@@ -1,5 +1,6 @@
+```sh
 # lnx2: forense en la nube, ram
-
+```
 ## en la nube
 
 - Crear dos recursos NFS o SMB en sitio "conocido" (nube restringida por nosotros): IR (read-only) y Datos (read-write)
