@@ -1,7 +1,7 @@
----
-curso dfir win2 @ 2023-05-15T09:30-13:00
-curso dfir win2 @ 2023-05-17T17:00-18:00
----
+```
+# curso dfir win2 @ 2023-05-15T09:30-13:00
+# curso dfir win2 @ 2023-05-17T17:00-18:00
+```
 # win2: adquisición de evidencias
 
 > Si un equipo está encendido: NO APAGARLO.
@@ -21,25 +21,25 @@ En cualquier caso, lo que se debe hacer es explicar el método de adquisición e
 
 ## Herramientas: RamCapturer
 https://belkasoft.com/es/ram-capturer
-```
+```cmd
 C:\Users\AdministratorDesktop\Wintriage_work\Wintriage_v01032020_curso\Tools> RamCapture64.exe memoria.mem
 ```
 Volcar la memoria es mucho más fácil en Windows que en Linux.
 
 ## Herramientas: RawCopy
-Ejemplo de uso: al intentar copiar `C:\WINDOWS\system32\config\SAM`, da que el usuario SYSTEM lo tiene abierto.
-RawCopy lo reintentará con un método distinto, "INDX method":
-	- Copia de forma binaria lo que tenga ese fichero en el sistema de ficheros.
-	- Relacionado con el índice que se guarda en el fichero `$i30` de cada directorio
-	- "No pide al sistema operativo un fichero, sino que lo dumpea directamente identificando offsets desde la MFT"
+Ejemplo de uso: al intentar copiar `C:\WINDOWS\system32\config\SAM`, da que el usuario SYSTEM lo tiene abierto.  
+RawCopy lo reintentará con un método distinto, "INDX method":  
+	- Copia de forma binaria lo que tenga ese fichero en el sistema de ficheros.  
+	- Relacionado con el índice que se guarda en el fichero `$i30` de cada directorio.  
+	- "No pide al sistema operativo un fichero, sino que lo dumpea directamente identificando offsets desde la MFT".
 
 ## Herramientas: FTK Imager Lite
 "Imprescindible, si os presentáis al examen [IRCP](https://certificaciones.securizame.com/ircp/) la usaréis sí o sí".
 Si el disco está cifrado ("unrecognized file system"), solo se puede abrir como unidad lógica.
 
-- Evitar "Esta aplicación se ha bloqueado para protegerte":
-  ![](img/_Pasted image 20230515134738.png)
-  ![](img/_Pasted image 20230515134854.png)
+- Evitar "Esta aplicación se ha bloqueado para protegerte":  
+![](https://raw.githubusercontent.com/jartigag/dfir/refs/heads/master/img/_Pasted%20image%2020230515134738.png)
+![](https://raw.githubusercontent.com/jartigag/dfir/refs/heads/master/img/_Pasted%20image%2020230515134854.png)
 
-- AD1: AccessData (formato propietario de FTK). Para extraer los ficheros concretos que nos queremos llevar.
+- AD1: AccessData (formato propietario de FTK). Para extraer los ficheros concretos que nos queremos llevar.  
 	- Genera `imagen.ad1.txt`, que Lorenzo siempre adjunta como Anexo 2 (el Anexo 1 es su CV) al informe pericial.
