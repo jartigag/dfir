@@ -1,5 +1,6 @@
+```sh
 # lnx1: forense
-
+```
 Recordatorios adquisición evidencias:
 
 - Mantener el estado de la máquina.
@@ -27,7 +28,8 @@ Recordatorios adquisición evidencias:
 
 ### Pasos en máquina vulnerada
 
-- [/] Preparar usb con `ir_usb.7z` y pasarlo sobre `Pwned.ova` (1:07:00)
+- `[/]` Preparar usb con `ir_usb.7z` y pasarlo sobre `Pwned.ova` (1:07:00)
+```sh
   $ sudo dd if=ir_usb.dd of=/dev/sda1 bs=8M status=progress
   [sudo] password for javi: 
   31004295168 bytes (31 GB, 29 GiB) copied, 2504 s, 12,4 MB/s
@@ -38,15 +40,16 @@ Recordatorios adquisición evidencias:
   $ sudo mount /dev/sda1 /mnt/tools
   [sudo] password for javi: 
   mount: /mnt/tools: tipo de sistema de ficheros incorrecto, opción incorrecta, superbloque incorrecto en /dev/sda1, falta la página de códigos o el programa auxiliar, o algún otro error.
+```
 
 - Crear directorios `/mnt/tools/` y `/mnt/datos/`
-- 
+```sh
 - `mount -r /dev/sdb3 /mnt/tools                    # -r: en readonly`
 - `mount /dev/sdb4 /mnt/datos`
 - `mkdir /mnt/datos/<caso1>`
 - `mount --rbind /mnt/datos/<caso1> /mnt/tools/mnt/ # como los .sh escribirán en /mnt,
 					            # monto /mnt/tools/mnt en el directorio del caso.`
-
+```
 - Después de ejecutar todo, asegurarse de que no hay nada cifrado que pueda corromperse y,
   si es así, tiramos del cable de corriente**
 	- ** [ ] ¿por qué nos interesa tirar desconectar la corriente en este caso?
