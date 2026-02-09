@@ -1,0 +1,7 @@
+- [win1__metodología[(win1__metodología.md)
+- [win2__adquisición_de_evidencias[(win2__adquisición_de_evidencias.md)
+- [win3__adquisición_de_evidencias[(win3__adquisición_de_evidencias.md)
+- [win4__artefactos[(win4__artefactos.md)
+- [win5__filesystem_ntfs_y_ram[(win5__filesystem_ntfs_y_ram.md)
+- [lnx1__forense[(lnx1__forense.md)
+- [lnx2__forense[(lnx2__forense.md)
