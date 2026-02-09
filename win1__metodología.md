@@ -1,6 +1,6 @@
 ```sh
-curso dfir win1 @ 2023-05-09T16:30-18:00
-curso dfir win1 @ 2023-05-10T15:30-16:30
+# curso dfir win1 @ 2023-05-09T16:30-18:00
+# curso dfir win1 @ 2023-05-10T15:30-16:30
 ```
 # win1: metodología
 
