@@ -1,7 +1,8 @@
----
-curso dfir win3 @ 2023-05-25T16:00-18:00
-curso dfir win3 @ 2023-05-29T13:30-15:00
----
+```sh
+# curso dfir win3 @ 2023-05-25T16:00-18:00
+# curso dfir win3 @ 2023-05-29T13:30-15:00
+```
+
 # win3: adquisición de evidencias
 
 ## Herramientas: LastActivityView
