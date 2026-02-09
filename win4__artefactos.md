@@ -1,9 +1,8 @@
----
+```sh
 curso dfir win4 @ 2023-06-06T14:30-16:00
 curso dfir win5 @ 2023-06-08T17:00-18:00
----
+```
 # win4: artefactos
-
 
 ## Hive
 - Rama del registro de Windows que almacena datos volátiles
