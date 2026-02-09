@@ -8,29 +8,29 @@
 ## Herramientas: LastActivityView
 ## Herramientas: Winaudit
 ## Herramientas: Win-UFO
-Incluido en CAINE hasta 7 (ahora vamos por la 11)
-	- Va en una partición de solo lectura, para Live USBs (lo podrías conectar a un equipo infectado con ransomware y no le pasaría nada). Si te quieres llevar algo, tendrás que enchufar otro dispositivo de escritura.
-	- No viene en las herramientas dentro de `DFIRWin/`.
+Incluido en CAINE hasta 7 (ahora vamos por la 11)  
+	- Va en una partición de solo lectura, para Live USBs (lo podrías conectar a un equipo infectado con ransomware y no le pasaría nada). Si te quieres llevar algo, tendrás que enchufar otro dispositivo de escritura.  
+	- No viene en las herramientas dentro de `DFIRWin/`.  
 ## Herramientas: IRTriage
-- En "Evidence Collection", vemos que no saca el JOURNAL de Windows.
-- Saca los VSCs (Volume Shadow Copies), aunque por defecto viene deshabilitado.
+- En "Evidence Collection", vemos que no saca el JOURNAL de Windows.  
+- Saca los VSCs (Volume Shadow Copies), aunque por defecto viene deshabilitado.  
 ## Herramientas: Windows Live Response
 [..]
 > Si nos conectamos a la víctima por RDP,
 > podemos activar en "Local Resources > More" el mapeado de nuestra unidad C:,
 > de forma que podamos ejecutar allí nuestras herramientas contaminando la víctima lo menos posible.
 > - El ejecutable (por ejemplo, FTK o WindowsLiveResponse) y sus DLLs se cargan en la máquina destino.
-> 	- [x] #to-do "Run as administrator" necesitará admin de la víctima, ¿no? ¿Qué hacemos si no lo tenemos?
+> 	- [x] "Run as administrator" necesitará admin de la víctima, ¿no? ¿Qué hacemos si no lo tenemos?
 
 ## Herramientas: WMIC
 En una cmd, después de ejecutar `wmic` (o si no `wmic + comando`):
-```
+```cmd
 product get name,version
 ```
-```
+```cmd
 wmic:root\cli>process call create "notepad.exe"
 ```
-```
+```cmd
 wmic:root\cli>/node:localhost /user:$user /password:$pass process where name="paint.exe" call terminate
 ```
 
@@ -59,9 +59,9 @@ Lorenzo no tiene clonadora física. Usa:
 	- Ej: Con RAID-5 (3 o más discos) o RAID-0 (nada redundado)
 
 ### Herramientas de clonado: Guymager
-Sobre el disco nuevo insertado, "Acquire image":
-	- Podemos elegir formato .dd o .exx (formato propietario de EnCASE)
-	- En "Image filename" y "Info filename", recomienda poner el núm. de serie del disco.
+Sobre el disco nuevo insertado, "Acquire image":  
+	- Podemos elegir formato .dd o .exx (formato propietario de EnCASE)  
+	- En "Image filename" y "Info filename", recomienda poner el núm. de serie del disco.  
 Lorenzo suele anexar el .info resultante al informe.
 
 ### Formatos de imágenes
@@ -81,9 +81,9 @@ Lorenzo suele anexar el .info resultante al informe.
 - Timeline
 
 ### Montaje de imágenes
-```
+```sh
 mount -t sistema_de_ficheros -o opciones imagen.dd /mnt/destino
-opciones: ro loop offset [show_sys_files streams_interface=windows]{si NFTS}
+# opciones: ro loop offset [show_sys_files streams_interface=windows]{si NFTS}
 ```
 
 ### Búsqueda de ficheros: [Everything](https://www.voidtools.com/downloads)
